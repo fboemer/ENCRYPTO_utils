@@ -7,7 +7,6 @@ add_library(encrypto_utils
     ${PROJECT_NAME}/crypto/crypto.cpp
     ${PROJECT_NAME}/crypto/dgk.cpp
     ${PROJECT_NAME}/crypto/djn.cpp
-    ${PROJECT_NAME}/crypto/ecc-pk-crypto.cpp
     ${PROJECT_NAME}/crypto/gmp-pk-crypto.cpp
     ${PROJECT_NAME}/crypto/intrin_sequential_enc8.cpp
     ${PROJECT_NAME}/crypto/TedKrovetzAesNiWrapperC.cpp
@@ -34,7 +33,6 @@ target_include_directories(encrypto_utils
 
 
 target_link_libraries(encrypto_utils
-    PRIVATE MIRACL::miracl
     PRIVATE Boost::system Boost::thread
     PUBLIC GMP::GMP GMP::GMPXX
     PUBLIC OpenSSL::Crypto
